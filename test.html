@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @keyframes btn_animation {
+            0%{
+                left: 0%;
+            }
+            20%{
+                left: -10%;
+            }
+            40%{
+                left: -20%;
+            }
+            60%{
+                left: -30%;
+            }
+            80%{
+                left: -40%;
+            }
+            100%{
+                left: -50%;
+            }
+        }
+        .main_div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left_div{
+            /* background-color: red; */
+            width: 50%;
+            height: 50px;
+        }
+        .right_div{
+            /* background-color: red; */
+            width: 50%;
+            height: 50px;
+            position: relative;
+            
+        }
+        a{
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            top: 15%;
+            transition: 5s;
+        }
+        .right_div:hover a{
+            left: -50%;
+            animation-name: btn_animation;
+            /* animation-duration: 5s; */
+            /* transition: 5s; */
+        }
+    </style>
+    <div class="main_div">
+        <div class="left_div"></div>
+        <div class="right_div">
+            <a href="#" class="btn">Submit</a>
+        </div>
+    </div>
+</body>
+</html>
